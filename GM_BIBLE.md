@@ -176,7 +176,7 @@ AV Club Filmmaker
 
 ## Ollie Banks ("Sad Boy")
 
-Sad Boy Skater / Improviser
+Skater / Improviser
 
 - STR 2 DEX 3 CON 2 INT 1 WIS 4 LUCK 3
 - HP 14 DEF 13
@@ -401,7 +401,7 @@ Everything Is Content
 
 ### Archetype
 
-Sad Boy Skater / Improviser
+Skater / Improviser
 
 ### Stats
 

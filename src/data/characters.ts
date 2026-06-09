@@ -127,7 +127,7 @@ export const rulesReference: RulesReference = {
 export const brockTimber: CharacterSheet = {
   playerName: "Luke",
   characterName: "Brock Timber",
-  nickname: "Paul Bunyon",
+  nickname: "Beef",
 
   archetype: "Wrestler Jock / Secret Nerd",
   shortDescription:
@@ -520,9 +520,9 @@ export const ollieBanks: CharacterSheet = {
   characterName: "Ollie Banks",
   nickname: "Sad Boy",
 
-  archetype: "Sad Boy Skater / Amateur Poet",
+  archetype: "Skater / Amateur Poet",
   shortDescription:
-    "A whiny hopeless romantic skater who acts like nothing matters while secretly caring about everything.",
+    "A hopeless romantic skater who acts like nothing matters while secretly caring about everything.",
 
   stats: {
     strength: 2,
@@ -537,9 +537,9 @@ export const ollieBanks: CharacterSheet = {
   defense: 13,
 
   specialAbility: {
-    name: "Trust Me, I Have An Idea",
+    name: "Just Introspect Bro",
     description:
-      "Once per scene, Ollie may propose an unconventional use for an item. If the GM agrees it is remotely plausible, Ollie gains Advantage on the roll.",
+      "Once per session, Ollie may read between the lines and ask the GM one question about a character's true feelings or intentions: What do they really want? What are they afraid of? Are they lying? What emotion are they hiding?",
     frequency: "once per scene",
   },
 
@@ -597,7 +597,7 @@ export const ollieBanks: CharacterSheet = {
       "A battered notebook full of melodramatic poems about loneliness, sunsets, heartbreak, and how nobody understands him. Ollie will deny owning it if asked.",
     tags: ["observe", "weird"],
     specialEffect:
-      "Once per session, Ollie may read between the lines and ask the GM one question about a character's true feelings or intentions: What do they really want? What are they afraid of? Are they lying? What emotion are they hiding?",
+      "Ollie may propose an unconventional use for an item. If the GM agrees it is remotely plausible, Ollie gains Advantage on the roll.",
   },
 
   roleplayNotes: {
