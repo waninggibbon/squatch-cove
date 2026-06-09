@@ -122,8 +122,12 @@ export function DiceRoller({ character }: { character: CharacterSheet }) {
     );
   };
 
+  // Luck rerolls are only for a plain Normal roll. Advantage/disadvantage
+  // already roll twice for free, so you can't also spend Luck on them.
+  const canLuckReroll = !!result && !rolling && mode === "normal" && rerolls > 0;
+
   const reroll = () => {
-    if (rerolls <= 0 || rolling) return;
+    if (!canLuckReroll) return;
     setRerolls(rerolls - 1); // spend one Luck
     roll();
   };
@@ -281,13 +285,15 @@ export function DiceRoller({ character }: { character: CharacterSheet }) {
           <Button
             variant="outline"
             onClick={reroll}
-            disabled={rolling || rerolls <= 0 || !result}
+            disabled={!canLuckReroll}
             className="w-full"
           >
             <Sparkles />
-            {rerolls > 0
-              ? `Reroll with Luck · ${rerolls} left`
-              : "No rerolls left"}
+            {mode !== "normal"
+              ? "Luck reroll — not on adv/disadv"
+              : rerolls > 0
+                ? `Reroll with Luck · ${rerolls} left`
+                : "No rerolls left"}
           </Button>
         </div>
       </DialogContent>

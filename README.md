@@ -1,4 +1,4 @@
-# Scouts of Lost Pine Island
+# Scouts of Squatch Cove
 
 A little phone-friendly character app for my homebrew family TTRPG. Players pop in
 their first name and get their scout's sheet — HP, status, abilities, gear, dice,
@@ -18,6 +18,9 @@ storage. Throwaway by design.
 
 The base sheets are read-only — only the live stuff (HP, statuses, etc.) changes.
 
+It's also a PWA — open it on a phone and "Add to Home Screen" for a full-screen
+app icon that works offline.
+
 ## Running it locally
 
 ```bash
@@ -33,6 +36,18 @@ on top of shadcn/ui for the fantasy look.
 
 Pushing to `main` auto-deploys to GitHub Pages (see `.github/workflows/deploy.yml`).
 The Vite `base` is `/dnd2026/`, so if you rename the repo, update that too.
+
+## App icon
+
+`public/app_icon.png` (1024×1024) is the source. The PWA/home-screen sizes are
+generated from it with the built-in macOS `sips`:
+
+```bash
+cd public
+sips -z 192 192 app_icon.png --out pwa-192x192.png
+sips -z 512 512 app_icon.png --out pwa-512x512.png
+sips -z 180 180 app_icon.png --out apple-touch-icon.png
+```
 
 ## Files worth knowing
 

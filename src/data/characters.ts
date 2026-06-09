@@ -1,5 +1,5 @@
 /**
- * Scouts of Lost Pine Island - Character Sheets
+ * Scouts of Squatch Cove - Character Sheets
  *
  * Lightweight TypeScript structure for pre-generated scout characters.
  * This is intended as a design/reference file, not necessarily production code.
@@ -173,33 +173,53 @@ export const brockTimber: CharacterSheet = {
       name: "Compass",
       description: "A reliable old compass clipped to Brock's belt.",
       tags: ["navigate", "track"],
-      exampleUses: ["Find north", "follow a trail", "avoid getting turned around"],
+      exampleUses: [
+        "Find north",
+        "follow a trail",
+        "avoid getting turned around",
+      ],
     },
     {
       name: "Cryptid Guidebook",
       description:
         "A battered paperback full of blurry photos, questionable diagrams, and surprisingly useful monster notes.",
       tags: ["observe", "weird"],
-      exampleUses: ["Identify monster habits", "spot fake Bigfoot evidence", "guess a creature weakness"],
+      exampleUses: [
+        "Identify monster habits",
+        "spot fake Bigfoot evidence",
+        "guess a creature weakness",
+      ],
     },
     {
       name: "Trail Markers",
       description: "Bright cloth strips and chalk for marking trails.",
       tags: ["navigate", "signal", "trap"],
-      exampleUses: ["Mark a safe route", "create a warning line", "leave messages for others"],
+      exampleUses: [
+        "Mark a safe route",
+        "create a warning line",
+        "leave messages for others",
+      ],
     },
     {
       name: "50ft Paracord",
       description: "Strong utility cord Brock carries everywhere.",
       tags: ["bind", "climb", "reach"],
-      exampleUses: ["Tie up a creature", "lower someone safely", "make a tripwire"],
+      exampleUses: [
+        "Tie up a creature",
+        "lower someone safely",
+        "make a tripwire",
+      ],
     },
     {
       name: "Wrestling Headgear",
       description:
         "Brock insists it is protective equipment. Everyone else thinks it looks ridiculous.",
       tags: ["defense", "weird"],
-      exampleUses: ["Soften a blow", "look ridiculous", "prove he is taking this very seriously"],
+      exampleUses: [
+        "Soften a blow",
+        "look ridiculous",
+        "prove he is taking this very seriously",
+      ],
     },
   ],
 
@@ -208,13 +228,18 @@ export const brockTimber: CharacterSheet = {
     description:
       "A wooden whistle Brock carved after watching six online videos about Sasquatch vocalizations.",
     tags: ["signal", "distract", "weird"],
-    exampleUses: ["Get Bigfoot's attention", "scare someone in the woods", "make a deeply upsetting noise"],
+    exampleUses: [
+      "Get Bigfoot's attention",
+      "scare someone in the woods",
+      "make a deeply upsetting noise",
+    ],
   },
 
   roleplayNotes: {
     wants: "To prove he is brave, useful, and definitely not scared.",
     fears: "Everyone finding out how much he cares about cryptids.",
-    attitude: "Acts tough, but becomes a giddy little scholar around monster evidence.",
+    attitude:
+      "Acts tough, but becomes a giddy little scholar around monster evidence.",
   },
 };
 
@@ -256,7 +281,8 @@ export const jettRivers: CharacterSheet = {
 
   flaw: {
     name: "No Self Preservation",
-    description: "Jett has never encountered a warning sign he considered useful.",
+    description:
+      "Jett has never encountered a warning sign he considered useful.",
     campCloutTrigger:
       "Gain 1 CC when Jett makes a situation worse by rushing in, accepting a challenge, ignoring obvious danger, or acting before thinking.",
   },
@@ -264,7 +290,8 @@ export const jettRivers: CharacterSheet = {
   equipment: [
     {
       name: "Heavy Duty Flashlight",
-      description: "A large metal flashlight. Jett primarily uses it as a club.",
+      description:
+        "A large metal flashlight. Jett primarily uses it as a club.",
       tags: ["light", "impact"],
     },
     {
@@ -307,7 +334,7 @@ export const jettRivers: CharacterSheet = {
 export const grantCompass: CharacterSheet = {
   playerName: "Cait",
   characterName: "Grant Compass",
-  nickname: "Captain",
+  nickname: "Sarge",
 
   archetype: "ROTC Cadet / Tactical Planner",
   shortDescription:
@@ -356,7 +383,8 @@ export const grantCompass: CharacterSheet = {
     },
     {
       name: "Whistle",
-      description: "A loud emergency whistle that can be heard across the island.",
+      description:
+        "A loud emergency whistle that can be heard across the island.",
       tags: ["signal", "distract"],
     },
     {
@@ -427,7 +455,8 @@ export const reedStatic: CharacterSheet = {
 
   meritBadge: {
     name: "Communications Badge",
-    description: "Reed knows how to make equipment work when it really shouldn't.",
+    description:
+      "Reed knows how to make equipment work when it really shouldn't.",
     oncePerSessionEffect:
       "Automatically establish communication, receive a message, or recover useful information from a device.",
   },
@@ -448,7 +477,8 @@ export const reedStatic: CharacterSheet = {
     },
     {
       name: "Boom Microphone",
-      description: "Excellent audio equipment and a surprisingly effective polearm.",
+      description:
+        "Excellent audio equipment and a surprisingly effective polearm.",
       tags: ["reach", "record"],
     },
     {
@@ -483,7 +513,8 @@ export const reedStatic: CharacterSheet = {
   roleplayNotes: {
     wants: "To make the greatest cryptid documentary ever filmed.",
     fears: "Missing the shot.",
-    attitude: "If something weird happens and nobody records it, did it even happen?",
+    attitude:
+      "If something weird happens and nobody records it, did it even happen?",
   },
 };
 
@@ -575,7 +606,8 @@ export const ollieBanks: CharacterSheet = {
   roleplayNotes: {
     wants: "To be understood.",
     fears: "Being vulnerable or sincere.",
-    attitude: "Acts like nothing matters while secretly caring about almost everything.",
+    attitude:
+      "Acts like nothing matters while secretly caring about almost everything.",
   },
 };
 

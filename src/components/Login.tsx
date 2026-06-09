@@ -26,7 +26,7 @@ export function Login() {
       <Card className="w-full max-w-sm">
         <CardHeader className="text-center">
           <CardTitle className="fantasy text-2xl leading-tight">
-            Scouts of Lost Pine Island
+            Scouts of Squatch Cove
           </CardTitle>
           <CardDescription>
             Enter your name to open your scout sheet.

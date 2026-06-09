@@ -1,4 +1,4 @@
-# Scouts of Lost Pine Island
+# Scouts of Squatch Cove
 
 ## Campaign Overview
 

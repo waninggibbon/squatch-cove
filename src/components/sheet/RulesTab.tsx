@@ -20,10 +20,8 @@ export function RulesTab() {
           <Row label="Max HP" value={rulesReference.maxHpFormula} />
           <Row label="Defense" value={rulesReference.defenseFormula} />
           <Row label="Luck" value={rulesReference.luckRule} />
-          <Row
-            label="Advantage"
-            value="Roll twice, take the better"
-          />
+          <Row label="Advantage" value="Roll twice, take the better" />
+          <Row label="Disadvantage" value="Roll twice, take the worse" />
         </div>
       </Section>
 

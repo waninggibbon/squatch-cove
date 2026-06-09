@@ -1,4 +1,4 @@
-# Scouts of Lost Pine Island — Player Companion App
+# Scouts of Squatch Cove — Player Companion App
 
 Design & implementation plan for a throwaway, front-end-only character-sheet app
 for the homebrew TTRPG. Players open it on their phones, type their first name,

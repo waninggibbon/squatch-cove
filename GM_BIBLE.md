@@ -160,7 +160,7 @@ Extreme Sports Daredevil
 - STR 3 DEX 4 CON 2 INT 0 WIS 1 LUCK 4
 - HP 14 DEF 14
 
-## Grant Compass ("Captain")
+## Grant Compass ("Sarge")
 
 ROTC Planner
 
@@ -289,7 +289,7 @@ No Self Preservation
 
 ---
 
-## Grant Compass ("Captain")
+## Grant Compass ("Sarge")
 
 ### Archetype
 
