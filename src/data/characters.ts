@@ -142,7 +142,7 @@ export const brockTimber: CharacterSheet = {
     luck: 2,
   },
 
-  maxHp: 16,
+  maxHp: 60,
   defense: 13,
 
   specialAbility: {
@@ -261,7 +261,7 @@ export const jettRivers: CharacterSheet = {
     luck: 4,
   },
 
-  maxHp: 14,
+  maxHp: 40,
   defense: 14,
 
   specialAbility: {
@@ -349,7 +349,7 @@ export const grantCompass: CharacterSheet = {
     luck: 1,
   },
 
-  maxHp: 14,
+  maxHp: 40,
   defense: 12,
 
   specialAbility: {
@@ -443,7 +443,7 @@ export const reedStatic: CharacterSheet = {
     luck: 3,
   },
 
-  maxHp: 12,
+  maxHp: 20,
   defense: 12,
 
   specialAbility: {
@@ -536,7 +536,7 @@ export const ollieBanks: CharacterSheet = {
     luck: 3,
   },
 
-  maxHp: 14,
+  maxHp: 40,
   defense: 13,
 
   specialAbility: {
