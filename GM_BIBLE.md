@@ -146,7 +146,7 @@ The players ultimately defeat the Listener by creating a better story.
 
 # Player Summary
 
-## Brock Timber ("Big Boots")
+## Brock Timber ("Paul Bunyon")
 
 Wrestler / Cryptid Nerd
 
@@ -185,7 +185,7 @@ Sad Boy Skater / Improviser
 
 # Player Character Summary
 
-## Brock Timber ("Big Boots")
+## Brock Timber ("Paul Bunyon")
 
 ### Archetype
 

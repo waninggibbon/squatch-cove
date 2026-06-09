@@ -27,7 +27,7 @@ export type GearTag =
   | "signal"
   | "reflect"
   | "repair"
-  | "light"
+  | "vision"
   | "fire"
   | "medical"
   | "track"
@@ -127,9 +127,9 @@ export const rulesReference: RulesReference = {
 export const brockTimber: CharacterSheet = {
   playerName: "Luke",
   characterName: "Brock Timber",
-  nickname: "Big Boots",
+  nickname: "Paul Bunyon",
 
-  archetype: "Wrestler Jock / Secret Cryptid Nerd",
+  archetype: "Wrestler Jock / Secret Nerd",
   shortDescription:
     "A varsity wrestler who pretends he is just here for the outdoor exercise, but absolutely owns a laminated Bigfoot field guide.",
 
@@ -148,7 +148,7 @@ export const brockTimber: CharacterSheet = {
   specialAbility: {
     name: "Varsity Headlock",
     description:
-      "When Brock grapples, pins, tackles, restrains, or physically controls a creature, he rolls twice and takes the better result.",
+      "When Brock grapples, pins, tackles, restrains, or physically controls a target, he rolls twice and takes the better result.",
     frequency: "always active",
   },
 
@@ -161,7 +161,7 @@ export const brockTimber: CharacterSheet = {
   },
 
   flaw: {
-    name: "Secret Monster Nerd",
+    name: "Amateur Cryptozoologist",
     description:
       "Brock tries to act cool, but gets visibly excited by monster tracks, weird hair samples, strange noises, and anything labeled 'unexplained.'",
     campCloutTrigger:
@@ -248,7 +248,7 @@ export const jettRivers: CharacterSheet = {
   characterName: "Jett Rivers",
   nickname: "Crash",
 
-  archetype: "Extreme Sports Daredevil",
+  archetype: "X Games Contestant",
   shortDescription:
     "A walking bad idea whose mother forced him into Scouts in a desperate attempt to teach him caution. It has not worked.",
 
@@ -292,7 +292,7 @@ export const jettRivers: CharacterSheet = {
       name: "Heavy Duty Flashlight",
       description:
         "A large metal flashlight. Jett primarily uses it as a club.",
-      tags: ["light", "impact"],
+      tags: ["vision", "impact"],
     },
     {
       name: "Waterproof Lighter",
@@ -305,14 +305,15 @@ export const jettRivers: CharacterSheet = {
       tags: ["record", "observe"],
     },
     {
+      name: "Survival Knife",
+      description:
+        "Jett keeps this in case he ever needs to cut off his own leg in a pinch.",
+      tags: ["melee", "repair"],
+    },
+    {
       name: "Energy Drink Multipack",
       description: "An irresponsible amount of caffeine.",
       tags: ["speed", "weird"],
-    },
-    {
-      name: "Pocket Slingshot",
-      description: "Technically not approved scouting equipment.",
-      tags: ["ranged", "distract"],
     },
   ],
 
@@ -399,14 +400,15 @@ export const grantCompass: CharacterSheet = {
       tags: ["medical", "navigate", "repair"],
     },
     {
-      name: "Survival Knife",
-      description: "A practical utility knife carried for field use.",
-      tags: ["melee", "repair"],
+      name: "Pocket Slingshot",
+      description:
+        "Technically not approved scouting equipment but Grant thinks the army would approve.",
+      tags: ["ranged", "distract"],
     },
     {
       name: "Emergency Flares",
       description: "A pair of bright emergency flares.",
-      tags: ["light", "fire", "signal"],
+      tags: ["vision", "fire", "signal"],
     },
   ],
 
@@ -472,7 +474,7 @@ export const reedStatic: CharacterSheet = {
   equipment: [
     {
       name: "Camcorder",
-      description: "His prized possession.",
+      description: "His prized possession. Includes a tripod",
       tags: ["record", "observe"],
     },
     {
@@ -483,13 +485,8 @@ export const reedStatic: CharacterSheet = {
     },
     {
       name: "Extension Cable",
-      description: "Useful for both filming and restraining cryptids.",
+      description: "Useful for both filming and restraining foes.",
       tags: ["bind", "reach"],
-    },
-    {
-      name: "Tripod",
-      description: "Camera support or improvised weapon.",
-      tags: ["impact", "observe"],
     },
     {
       name: "Duct Tape",
