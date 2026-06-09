@@ -12,14 +12,14 @@ luck rerolls, and ability usage during play. Everything persists in `localStorag
 
 ## 1. Decisions (confirmed)
 
-| Area | Decision |
-| --- | --- |
-| **Identity** | Players type their **first name** (Luke / Cade / Cait / Blake / Katie), case-insensitive. |
+| Area                  | Decision                                                                                                                                                       |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Identity**          | Players type their **first name** (Luke / Cade / Cait / Blake / Katie), case-insensitive.                                                                      |
 | **Tracked / mutable** | HP (±), **Camp Clout** (0–3), **Luck/rerolls remaining**, **ability-usage toggles** (once-per-scene/session powers), **status conditions** (presets + custom). |
-| **Reference content** | **Rules cheat-sheet only** — no campaign story/premise in the player app (keeps GM secrets out). |
-| **Editing** | Base sheet is **read-only**; players additionally get a **personal notes** field. |
-| **Hosting** | Static site on **GitHub Pages**. |
-| **UI kit** | **warcraftcn** (shadcn/ui-based, WoW-themed registry) for a fantasy/D&D feel. |
+| **Reference content** | **Rules cheat-sheet only** — no campaign story/premise in the player app (keeps GM secrets out).                                                               |
+| **Editing**           | Base sheet is **read-only**; players additionally get a **personal notes** field.                                                                              |
+| **Hosting**           | Static site on **GitHub Pages**.                                                                                                                               |
+| **UI kit**            | **warcraftcn** (shadcn/ui-based, WoW-themed registry) for a fantasy/D&D feel.                                                                                  |
 
 ---
 
@@ -53,15 +53,15 @@ unchanged (or re-export). HP max and defense are already precomputed per charact
 
 ### 3.2 Mutable per-player state (the only thing in `localStorage`)
 
-This is the *overlay* on top of the static sheet — the small set of values that
+This is the _overlay_ on top of the static sheet — the small set of values that
 change during play. Keyed by character so each phone only ever holds its owner's data.
 
 ```ts
 // src/types/playerState.ts
 export type StatusCondition = {
-  id: string;          // uuid/random — for list keys & removal
-  label: string;       // "Scared", "Poisoned", or a custom string
-  note?: string;       // optional detail
+  id: string; // uuid/random — for list keys & removal
+  label: string; // "Scared", "Poisoned", or a custom string
+  note?: string; // optional detail
 };
 
 export type AbilityUsage = {
@@ -72,19 +72,19 @@ export type AbilityUsage = {
 };
 
 export type PlayerState = {
-  characterId: string;       // matches a slug derived from characterName
-  currentHp: number;         // starts at maxHp
-  campClout: number;         // 0..3
-  rerollsRemaining: number;  // starts at stats.luck
+  characterId: string; // matches a slug derived from characterName
+  currentHp: number; // starts at maxHp
+  campClout: number; // 0..3
+  rerollsRemaining: number; // starts at stats.luck
   abilityUsage: AbilityUsage;
   statuses: StatusCondition[];
-  notes: string;             // personal free-text
+  notes: string; // personal free-text
   updatedAt: number;
 };
 ```
 
 - **Identity → character mapping:** a lookup `firstName.toLowerCase() →
-  characterId`. Derive `characterId` as a slug of `characterName`
+characterId`. Derive `characterId` as a slug of `characterName`
   (`"brock-timber"`). Store the resolved `characterId` in `localStorage` under a
   small `activeCharacterId` key so a returning player skips the login screen.
 - **Defaults / "new session":** `currentHp = maxHp`, `rerollsRemaining = luck`,
@@ -150,6 +150,7 @@ Navigation between the sheet and the rules cheat-sheet: **Tabs** at the top
 (`Sheet` / `Rules`) or the rules as a bottom-sheet — Tabs are simplest on mobile.
 
 ### Visual/theming notes
+
 - Use warcraftcn's parchment/fantasy card + border treatments for the D&D feel.
 - Large tap targets (≥44px), thumb-reachable primary controls, sticky vitals bar.
 - Per-character accent color (derive from archetype) to make sheets feel distinct.
@@ -159,18 +160,18 @@ Navigation between the sheet and the rules cheat-sheet: **Tabs** at the top
 
 ## 5. warcraftcn / shadcn component mapping
 
-| Need | Component |
-| --- | --- |
-| Page/section containers | `Card`, `CardHeader/Content` |
-| HP ± , Reset buttons | `Button` (icon + size variants) |
-| Camp Clout / rerolls | `Button` steppers or custom pip toggles |
-| Status chips | `Badge` (+ removable variant) |
-| Add-status / reset confirm | `Dialog` / `AlertDialog` |
-| Sheet vs Rules | `Tabs` |
-| Abilities | `Accordion` or `Collapsible` |
-| Overflow menu | `DropdownMenu` |
-| Notes | `Textarea` |
-| Toast on save/reset (optional) | `Sonner`/`Toast` |
+| Need                           | Component                               |
+| ------------------------------ | --------------------------------------- |
+| Page/section containers        | `Card`, `CardHeader/Content`            |
+| HP ± , Reset buttons           | `Button` (icon + size variants)         |
+| Camp Clout / rerolls           | `Button` steppers or custom pip toggles |
+| Status chips                   | `Badge` (+ removable variant)           |
+| Add-status / reset confirm     | `Dialog` / `AlertDialog`                |
+| Sheet vs Rules                 | `Tabs`                                  |
+| Abilities                      | `Accordion` or `Collapsible`            |
+| Overflow menu                  | `DropdownMenu`                          |
+| Notes                          | `Textarea`                              |
+| Toast on save/reset (optional) | `Sonner`/`Toast`                        |
 
 All pulled into `src/components/ui/` via the shadcn CLI against the warcraftcn
 registry, then composed into feature components under `src/components/sheet/`.
@@ -219,37 +220,45 @@ dnd2026/
 ## 7. Implementation phases
 
 **Phase 0 — Scaffold (≈30 min)**
+
 - `npm create vite@latest` (react-ts), add Tailwind, init shadcn (`components.json`),
   wire warcraftcn registry, add `Button/Card/Badge/Tabs` to prove the pipeline.
 - Set `vite.config.ts` `base` to the repo name for Pages.
 
 **Phase 1 — Data + identity**
+
 - Move `character_sheets.ts` → `src/data/characters.ts`. Add `slug()` + a
   `findCharacterByName(input)` in `lib/identity.ts`. Unit-check all five names map.
 
 **Phase 2 — Store + persistence**
+
 - `usePlayerStore` (Zustand `persist`). Actions: `loginByName`, `logout`,
   `adjustHp`, `setCampClout`, `setRerolls`, `toggleAbility`, `addStatus`,
   `removeStatus`, `setNotes`, `newSession`, `fullReset`. Hydrate `lpi:active`.
 
 **Phase 3 — Login screen**
+
 - `Login.tsx` + the gate in `App.tsx`. Error states. Auto-skip when remembered.
 
 **Phase 4 — Sheet read-only render**
+
 - Header, StatGrid, Abilities (with secret-item reveal), Equipment, RulesTab.
   Pure display from static data — no mutation yet.
 
 **Phase 5 — Mutable controls**
+
 - VitalsBar (HP ±, defense, Camp Clout pips, reroll stepper), StatusConditions
   (presets + custom via Dialog), Notes (debounced save), overflow menu with
   New-session / Full-reset (AlertDialog confirm).
 
 **Phase 6 — Polish & mobile pass**
+
 - Sticky vitals, tap-target sizing, per-character accent, HP color states, dark
   theme, empty/edge states (HP can't exceed max or go below 0; clout 0–3;
   rerolls 0–luck). Quick pass on a real phone / device emulation.
 
 **Phase 7 — Deploy**
+
 - GitHub repo + `deploy.yml` (build on push to `main`, publish `dist/` to Pages).
   Verify the `base` path so assets resolve under `username.github.io/<repo>/`.
 
