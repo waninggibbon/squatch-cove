@@ -1,5 +1,10 @@
 import { usePlayerStore, useActivePlayer } from "@/store/usePlayerStore";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/warcraftcn/tabs";
 
 import { SheetHeader } from "@/components/sheet/SheetHeader";
 import { VitalsBar } from "@/components/sheet/VitalsBar";
