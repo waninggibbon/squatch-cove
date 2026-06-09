@@ -152,7 +152,7 @@ export function DiceRoller({ character }: { character: CharacterSheet }) {
       <DialogTrigger asChild>
         <Button
           size="lg"
-          className="fixed bottom-5 right-5 z-30 size-14 rounded-full shadow-lg shadow-black/40"
+          className="fixed bottom-[calc(1.25rem+env(safe-area-inset-bottom))] right-[calc(1.25rem+env(safe-area-inset-right))] z-30 size-14 rounded-full shadow-lg shadow-black/40"
           aria-label="Roll dice"
         >
           <Dices className="size-7" />

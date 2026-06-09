@@ -28,7 +28,7 @@ export function VitalsBar({
   const maxClout = 3;
 
   return (
-    <div className="sticky top-0 z-20 border-b border-amber-900/40 bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+    <div className="sticky top-0 z-20 border-b border-amber-900/40 bg-background/90 pt-[env(safe-area-inset-top)] backdrop-blur supports-[backdrop-filter]:bg-background/70">
       <div className="mx-auto flex max-w-md flex-col gap-3 px-3 py-3">
         {/* HP */}
         <div className="flex items-center justify-between gap-2">
