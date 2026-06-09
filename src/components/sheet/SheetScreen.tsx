@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { SheetHeader } from "@/components/sheet/SheetHeader";
 import { VitalsBar } from "@/components/sheet/VitalsBar";
+import { PersonalityTraits } from "@/components/sheet/PersonalityTraits";
 import { StatusConditions } from "@/components/sheet/StatusConditions";
 import { StatGrid } from "@/components/sheet/StatGrid";
 import { Abilities } from "@/components/sheet/Abilities";
@@ -36,6 +37,7 @@ export function SheetScreen() {
         </TabsList>
 
         <TabsContent value="sheet" className="flex flex-col gap-3">
+          <PersonalityTraits character={character} />
           <StatusConditions state={state} />
           <StatGrid stats={character.stats} />
           <Abilities

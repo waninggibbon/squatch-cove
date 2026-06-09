@@ -5,7 +5,7 @@ their first name and get their scout's sheet — HP, status, abilities, gear, di
 the works. No login, no backend, everything just lives in the phone's local
 storage. Throwaway by design.
 
-**Play here:** https://waninggibbon.github.io/dnd2026/
+**Play here:** https://waninggibbon.github.io/squatch-cove/
 
 ## What players can do
 
@@ -35,7 +35,7 @@ on top of shadcn/ui for the fantasy look.
 ## Deploy
 
 Pushing to `main` auto-deploys to GitHub Pages (see `.github/workflows/deploy.yml`).
-The Vite `base` is `/dnd2026/`, so if you rename the repo, update that too.
+The Vite `base` is `/squatch-cove/`, so if you rename the repo, update that too.
 
 ## App icon
 

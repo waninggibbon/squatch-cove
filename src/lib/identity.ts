@@ -37,7 +37,7 @@ export function findCharacterById(id: string): CharacterSheet | undefined {
 
 /**
  * Portrait lives in /public as `<firstname>.png`. Built with Vite's BASE_URL so
- * it resolves under the GitHub Pages subpath (/dnd2026/) in production.
+ * it resolves under the GitHub Pages subpath (/squatch-cove/) in production.
  */
 export function avatarUrl(c: CharacterSheet): string {
   return `${import.meta.env.BASE_URL}${slug(c.playerName)}.png`;

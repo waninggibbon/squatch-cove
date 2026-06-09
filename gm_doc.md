@@ -388,7 +388,7 @@ Players earn CC when they:
 
 Players may spend CC to:
 
-- Reroll a check.
+- Roll with advantage.
 - Reduce incoming damage.
 - Introduce a useful minor item.
 - Create a helpful coincidence.

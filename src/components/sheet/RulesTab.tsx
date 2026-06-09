@@ -25,6 +25,45 @@ export function RulesTab() {
         </div>
       </Section>
 
+      <Section title="Combat">
+        <div className="flex flex-col">
+          <Row label="Initiative" value="d20 + DEX" />
+          <Row label="Attack" value="d20 + relevant stat" />
+          <Row label="Defense" value="10 + DEX" />
+        </div>
+        <div>
+          <h3 className="text-xs uppercase tracking-wider text-amber-200/80">
+            Damage
+          </h3>
+          <ul className="mt-1 list-disc pl-4 text-[12px] text-muted-foreground">
+            <li>
+              <span className="text-amber-200/90">Heavy</span> weapons don't
+              modify the roll
+            </li>
+            <li>
+              <span className="text-amber-200/90">Medium</span> weapons subtract
+              5 from the roll
+            </li>
+            <li>
+              <span className="text-amber-200/90">Light</span> weapons subtract
+              10 from the roll
+            </li>
+          </ul>
+          <ul className="mt-2 list-disc pl-4 text-[12px] text-muted-foreground">
+            <li>
+              Add <span className="text-amber-200/90">STR</span> to melee damage
+            </li>
+            <li>
+              Add <span className="text-amber-200/90">INT</span> to ranged damage
+            </li>
+            <li>
+              Add <span className="text-amber-200/90">WIS</span> if you found a
+              way to attack with something that really shouldn't be a weapon
+            </li>
+          </ul>
+        </div>
+      </Section>
+
       <Section title="Camp Clout">
         <p className="text-sm text-muted-foreground">
           Shared narrative currency. Hold up to{" "}
@@ -51,7 +90,7 @@ export function RulesTab() {
               Spend to
             </h3>
             <ul className="mt-1 list-disc pl-4 text-[12px] text-muted-foreground">
-              <li>Reroll a check</li>
+              <li>Roll with advantage</li>
               <li>Reduce incoming damage</li>
               <li>Introduce a minor item</li>
               <li>Create a lucky coincidence</li>

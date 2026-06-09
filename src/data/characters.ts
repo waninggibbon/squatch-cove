@@ -84,7 +84,7 @@ export type CharacterSheet = {
 
   stats: Stats;
 
-  /** Formula: 10 + constitution * 2 */
+  /** Formula: 20 * constitution */
   maxHp: number;
 
   /** Formula: 10 + dexterity */
@@ -107,7 +107,7 @@ export type CharacterSheet = {
 };
 
 export type RulesReference = {
-  maxHpFormula: "10 + constitution * 2";
+  maxHpFormula: "20 * constitution";
   defenseFormula: "10 + dexterity";
   checkFormula: "d20 + relevant stat";
   equipmentBonus: "+2 when an equipment tag clearly applies";
@@ -116,7 +116,7 @@ export type RulesReference = {
 };
 
 export const rulesReference: RulesReference = {
-  maxHpFormula: "10 + constitution * 2",
+  maxHpFormula: "20 * constitution",
   defenseFormula: "10 + dexterity",
   checkFormula: "d20 + relevant stat",
   equipmentBonus: "+2 when an equipment tag clearly applies",
@@ -421,14 +421,14 @@ export const grantCompass: CharacterSheet = {
     wants: "To prove that preparation and discipline matter.",
     fears: "Losing control of a situation.",
     attitude:
-      "Every problem can be solved with proper planning, teamwork, and a clearly defined objective.",
+      'Every problem can be solved with proper planning, teamwork, and a clearly defined objective. Doesn\'t realize that the other kids call him "Sarge" ironically.',
   },
 };
 
 export const reedStatic: CharacterSheet = {
   playerName: "Blake",
   characterName: "Reed Static",
-  nickname: "Mic Check",
+  nickname: "Tarantiny",
 
   archetype: "AV Club Filmmaker",
   shortDescription:
@@ -514,14 +514,14 @@ export const reedStatic: CharacterSheet = {
     wants: "To make the greatest cryptid documentary ever filmed.",
     fears: "Missing the shot.",
     attitude:
-      "If something weird happens and nobody records it, did it even happen?",
+      "If something weird happens and nobody records it, did it even happen? If nothing happened and I recorded it anyways, can I fix it in post?",
   },
 };
 
 export const ollieBanks: CharacterSheet = {
   playerName: "Katie",
   characterName: "Ollie Banks",
-  nickname: "Kickflip",
+  nickname: "Sad Boy",
 
   archetype: "Sad Boy Skater / Amateur Poet",
   shortDescription:

@@ -181,7 +181,7 @@ registry, then composed into feature components under `src/components/sheet/`.
 ## 6. Proposed file structure
 
 ```
-dnd2026/
+squatch-cove/
 ├─ index.html
 ├─ package.json
 ├─ vite.config.ts            # base: '/<repo>/' for GitHub Pages

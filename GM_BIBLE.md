@@ -162,19 +162,19 @@ Extreme Sports Daredevil
 
 ## Grant Compass ("Sarge")
 
-ROTC Planner
+ROTC Diehard
 
 - STR 1 DEX 2 CON 2 INT 4 WIS 3 LUCK 1
 - HP 14 DEF 12
 
-## Reed Static ("Mic Check")
+## Reed Static ("Tarantiny")
 
 AV Club Filmmaker
 
 - STR 0 DEX 2 CON 1 INT 3 WIS 4 LUCK 3
 - HP 12 DEF 12
 
-## Ollie Banks ("Kickflip")
+## Ollie Banks ("Sad Boy")
 
 Sad Boy Skater / Improviser
 
@@ -343,7 +343,7 @@ Operation: Calm Down
 
 ---
 
-## Reed Static ("Mic Check")
+## Reed Static ("Tarantiny")
 
 ### Archetype
 
@@ -397,7 +397,7 @@ Everything Is Content
 
 ---
 
-## Ollie Banks ("Kickflip")
+## Ollie Banks ("Sad Boy")
 
 ### Archetype
 
@@ -559,18 +559,11 @@ Hit.
 
 ### Damage
 
-Examples:
-
-| Weapon             | Damage |
-| ------------------ | ------ |
-| Pocket Knife       | d4     |
-| Club / Flashlight  | d6     |
-| Axe / Heavy Weapon | d8     |
-| Monster Attack     | varies |
-
 Add Strength to melee damage.
 
 Add Intelligence to ranged damage.
+
+Add Wisdom when you found a way to attack with something that really shouldn't be used to attack with.
 
 ---
 
@@ -582,7 +575,7 @@ Defense = 10 + Dexterity
 
 ### Hit Points
 
-HP = 10 + (Constitution × 2)
+HP = 20 \* constitution
 
 ---
 
@@ -650,7 +643,7 @@ Earn CC when players:
 
 Spend CC to:
 
-- Reroll a check
+- Roll with advantage
 - Reduce incoming damage by 5
 - Introduce a useful minor item
 - Create a helpful coincidence
@@ -707,12 +700,13 @@ Defense:
 
 Damage:
 
-- Light Weapon: d4
-- Medium Weapon: d6
-- Heavy Weapon: d8
+HEAVY weapons do not modify roll
+MEDIUM weapons subtract 5 to roll
+LIGHT weapons subtract 10 to roll
 
 Add STR to melee damage.
 Add INT to ranged damage.
+Add WIS if you found a way to attack with something that really shouldn't be a weapon.
 
 ## Conditions
 
@@ -735,7 +729,7 @@ Earn when players:
 
 Spend CC to:
 
-- Reroll a check
+- Roll with advantage
 - Reduce damage by 5
 - Introduce a useful minor item
 - Create a helpful coincidence
