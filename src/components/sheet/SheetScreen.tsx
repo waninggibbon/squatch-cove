@@ -43,7 +43,12 @@ export function SheetScreen() {
             usage={state.abilityUsage}
             onToggle={toggleAbility}
           />
-          <Equipment items={character.equipment} />
+          <Equipment
+            items={character.equipment}
+            secretItem={character.secretItem}
+            secretUsed={state.abilityUsage.secretItem}
+            onToggleSecret={() => toggleAbility("secretItem")}
+          />
           <Notes key={character.characterName} initialNotes={state.notes} />
         </TabsContent>
 

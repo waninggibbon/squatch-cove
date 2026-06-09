@@ -1,10 +1,7 @@
-import { useState } from "react";
-
 import type { CharacterSheet } from "@/data/characters";
 import type { AbilityUsage } from "@/types/playerState";
 import { Section } from "@/components/sheet/Section";
 import { Badge } from "@/components/ui/warcraftcn/badge";
-import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 
@@ -88,8 +85,7 @@ export function Abilities({
   usage: AbilityUsage;
   onToggle: (key: keyof AbilityUsage) => void;
 }) {
-  const [revealed, setRevealed] = useState(false);
-  const { specialAbility, meritBadge, flaw, secretItem } = character;
+  const { specialAbility, meritBadge, flaw } = character;
   const abilityIsToggleable = specialAbility.frequency !== "always active";
 
   return (
@@ -130,55 +126,6 @@ export function Abilities({
           effect={flaw.campCloutTrigger}
           effectLabel="+1 Camp Clout:"
         />
-
-        {secretItem && (
-          <div className="rounded-lg border border-dashed border-amber-700/50 bg-black/20 p-3">
-            {!revealed ? (
-              <Button
-                variant="outline"
-                className="w-full"
-                onClick={() => setRevealed(true)}
-              >
-                Reveal secret item…
-              </Button>
-            ) : (
-              <>
-                <div className="flex items-start justify-between gap-2">
-                  <div>
-                    <span className="text-[10px] uppercase tracking-wider text-amber-300/70">
-                      Secret item
-                    </span>
-                    <h3 className="fantasy font-semibold text-amber-100">
-                      {secretItem.name}
-                    </h3>
-                  </div>
-                  {secretItem.specialEffect && (
-                    <UsedToggle
-                      id="use-secret"
-                      checked={usage.secretItem}
-                      onCheckedChange={() => onToggle("secretItem")}
-                    />
-                  )}
-                </div>
-                <div className="mt-1 flex flex-wrap gap-1">
-                  {secretItem.tags.map((tag) => (
-                    <Badge key={tag} variant="outline" size="sm">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  {secretItem.description}
-                </p>
-                {secretItem.specialEffect && (
-                  <p className="mt-1.5 rounded border border-amber-700/40 bg-amber-950/30 p-2 text-[11px] text-amber-100/90">
-                    {secretItem.specialEffect}
-                  </p>
-                )}
-              </>
-            )}
-          </div>
-        )}
       </div>
     </Section>
   );
