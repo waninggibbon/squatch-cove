@@ -54,7 +54,8 @@ export function RulesTab() {
               Add <span className="text-amber-200/90">STR</span> to melee damage
             </li>
             <li>
-              Add <span className="text-amber-200/90">INT</span> to ranged damage
+              Add <span className="text-amber-200/90">INT</span> to ranged
+              damage
             </li>
             <li>
               Add <span className="text-amber-200/90">WIS</span> if you found a
@@ -96,6 +97,22 @@ export function RulesTab() {
               <li>Create a lucky coincidence</li>
             </ul>
           </div>
+        </div>
+      </Section>
+
+      <Section title="Secret Items">
+        <div className="flex flex-col gap-2">
+          <p className="text-sm text-muted-foreground">
+            Your secret item can be used anytime (unless otherwise noted) but
+            only works when others do not know you have it.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            If someone discovers the existence of your item, you must use it
+            within 15 minutes or it loses effectiveness.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            To use it without drawing attention, text the DM.
+          </p>
         </div>
       </Section>
     </div>
