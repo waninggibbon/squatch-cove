@@ -5,6 +5,9 @@ their first name and get their scout's sheet — HP, status, abilities, gear, di
 the works. No login, no backend, everything just lives in the phone's local
 storage. Throwaway by design.
 
+Big warning that I am a massive pantser who makes up rules on the fly and goes with
+the flow so this is not nearly fleshed out enough for general use.
+
 **Play here:** https://waninggibbon.github.io/squatch-cove/
 
 ## What players can do
